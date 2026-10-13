@@ -1,0 +1,284 @@
+---
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  platform:
+    architectures:
+      - "amd64"
+    channels:
+      - name: stable-4.22
+        minVersion: 4.22.16
+        maxVersion: 4.22.16
+    graph: true
+  operators:
+    - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.22
+      packages:
+        - name: advanced-cluster-management
+          channels:
+            - name: release-2.17
+              minVersion: 2.17.3
+              maxVersion: 2.17.3
+        - name: cephcsi-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: cincinnati-operator
+          channels:
+            - name: v1
+              minVersion: 5.0.3
+              maxVersion: 5.0.3
+        - name: cluster-kube-descheduler-operator
+          channels:
+            - name: stable
+              minVersion: 5.4.3
+              maxVersion: 5.4.3
+        - name: cluster-logging
+          channels:
+            - name: stable-6.6
+              minVersion: 6.6.1
+              maxVersion: 6.6.1
+        - name: cluster-observability-operator
+          channels:
+            - name: stable
+              minVersion: 1.5.3
+              maxVersion: 1.5.3
+        - name: clusterresourceoverride
+          channels:
+            - name: stable
+              minVersion: 4.22.0-202609291750
+              maxVersion: 4.22.0-202609291750
+        - name: fence-agents-remediation
+          channels:
+            - name: stable
+              minVersion: 0.8.1
+              maxVersion: 0.8.1
+        - name: kubernetes-nmstate-operator
+          channels:
+            - name: stable
+              minVersion: 4.22.0-202609301304
+              maxVersion: 4.22.0-202609301304
+        - name: kubevirt-hyperconverged
+          channels:
+            - name: stable
+              minVersion: 4.22.9
+              maxVersion: 4.22.9
+        - name: lightspeed-operator
+          channels:
+            - name: stable
+              minVersion: 1.1.4
+              maxVersion: 1.1.4
+        - name: local-storage-operator
+          channels:
+            - name: stable
+              minVersion: 4.22.0-202609291750
+              maxVersion: 4.22.0-202609291750
+        - name: machine-deletion-remediation
+          channels:
+            - name: stable
+              minVersion: 0.7.1
+              maxVersion: 0.7.1
+        - name: metallb-operator
+          channels:
+            - name: stable
+              minVersion: 4.22.0-202609300304
+              maxVersion: 4.22.0-202609300304
+        - name: mtv-operator
+          channels:
+            - name: release-v2.12
+              minVersion: 2.12.9
+              maxVersion: 2.12.9
+        - name: multicluster-engine
+          channels:
+            - name: stable-2.17
+              minVersion: 2.17.3
+              maxVersion: 2.17.3
+        - name: multicluster-global-hub-operator-rh
+          channels:
+            - name: release-1.8
+              minVersion: 1.8.2
+              maxVersion: 1.8.2
+        - name: netobserv-operator
+          channels:
+            - name: stable
+              minVersion: 1.12.3
+              maxVersion: 1.12.3
+        - name: nfd
+          channels:
+            - name: stable
+              minVersion: 4.22.0-202609291750
+              maxVersion: 4.22.0-202609291750
+        - name: node-healthcheck-operator
+          channels:
+            - name: stable
+              minVersion: 0.12.1
+              maxVersion: 0.12.1
+        - name: node-maintenance-operator
+          channels:
+            - name: stable
+              minVersion: 5.7.1
+              maxVersion: 5.7.1
+        - name: node-observability-operator
+          channels:
+            - name: alpha
+              minVersion: 0.2.0
+              maxVersion: 0.2.0
+        - name: numaresources-operator
+          channels:
+            - name: "4.22"
+              minVersion: 4.22.1
+              maxVersion: 4.22.1
+        - name: ocs-client-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: ocs-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: ocs-tls-profiles
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odf-csi-addons-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odf-dependencies
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odf-external-snapshotter-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odf-multicluster-orchestrator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odf-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odf-prometheus-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odr-cluster-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odr-hub-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: odr-volsync-plugin-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: recipe
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: rook-ceph-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: openshift-cert-manager-operator
+          channels:
+            - name: stable-v1
+              minVersion: 1.20.1
+              maxVersion: 1.20.1
+        - name: mcg-operator
+          channels:
+            - name: stable-4.22
+              minVersion: 4.22.5-rhodf
+              maxVersion: 4.22.5-rhodf
+        - name: openshift-gitops-operator
+          channels:
+            - name: latest
+              minVersion: 1.22.1
+              maxVersion: 1.22.1
+        - name: openshift-pipelines-operator-rh
+          channels:
+            - name: latest
+              minVersion: 1.24.0
+              maxVersion: 1.24.0
+        - name: redhat-oadp-operator
+          channels:
+            - name: stable
+              minVersion: 1.6.1
+              maxVersion: 1.6.1
+        - name: self-node-remediation
+          channels:
+            - name: stable
+              minVersion: 0.13.1
+              maxVersion: 0.13.1
+        - name: sriov-network-operator
+          channels:
+            - name: stable
+              minVersion: 4.22.0-202609291750
+              maxVersion: 4.22.0-202609291750
+        - name: web-terminal
+          channels:
+            - name: fast
+              minVersion: 1.17.1
+              maxVersion: 1.17.1
+        - name: devworkspace-operator
+          channels:
+            - name: fast
+              minVersion: 0.43.0
+              maxVersion: 0.43.0
+        - name: openshift-external-secrets-operator
+          channels:
+            - name: stable-v1
+              minVersion: 1.2.1
+              maxVersion: 1.2.1
+        - name: secrets-store-csi-driver-operator
+          channels:
+            - name: stable
+              minVersion: 4.22.0-202609291750
+              maxVersion: 4.22.0-202609291750
+    - catalog: registry.redhat.io/redhat/certified-operator-index:v4.22
+      packages:
+        - name: k10-kasten-operator-rhmp
+          channels:
+            - name: stable
+              minVersion: 9.0.7
+              maxVersion: 9.0.7
+        - name: dynatrace-operator
+          channels:
+            - name: alpha
+              minVersion: 1.11.0
+              maxVersion: 1.11.0
+        - name: trident-operator
+          channels:
+            - name: stable
+              minVersion: 26.6.1
+              maxVersion: 26.6.1
+        - name: vault-secrets-operator
+          channels:
+            - name: stable
+              minVersion: 1.6.1
+              maxVersion: 1.6.1
+  additionalImages:
+    - name: registry.redhat.io/ubi8/ubi:latest
+    - name: registry.redhat.io/ubi9/ubi:latest
+    - name: registry.redhat.io/ubi10/ubi:latest
+    - name: registry.redhat.io/rhel8/rhel-guest-image:latest
+    - name: registry.redhat.io/rhel9/rhel-guest-image:latest
+    - name: registry.redhat.io/rhel10/rhel-guest-image:latest
